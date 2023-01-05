@@ -40,13 +40,14 @@ You need to deploy [Standard Library](../move_vm/stdlib.md) after building a loc
 ```sh
 git clone git@github.com:pontem-network/move-stdlib.git
 cd move-stdlib
-dove build --package
+# dove build --package    invalid argument in dove 1.7.1
+dove deploy   
 ```
 
-Dove build generates new package (means one binary contains all modules) and write in output where package placed, usually it's `./target/packages`:
+Dove build generates new package (means one binary contains all modules) and write in output where package placed, usually it's `./build/MoveStdlib/bundles`:
 
 ```sh
-ls -la ./target/packages
+ls -la ./build/MoveStdlib/bundles
 ```
 
 See instruction how to deploy compiled package using `sudo`:

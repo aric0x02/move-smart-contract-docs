@@ -50,6 +50,6 @@ Replace values with your own, run execute transaction and see output, generated 
 }
 ```
 
-Where vakue `0x02016500000000000000` is indeed our error incoded in LCS, see [Events](./events.md) tutorial for details.
+Where value `0x02016500000000000000` is indeed our error encoded in LCS, see [Events](./events.md) tutorial for details.
 
 **Important: The described way is not the best, but only way to get custom errors from Move VM in Move pallet right now, we are working hard to make it better and more useful.**

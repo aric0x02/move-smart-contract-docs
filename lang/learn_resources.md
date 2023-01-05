@@ -2,7 +2,7 @@
 
 Resource is the main feature of **Move VM**. Resource is a special type in Move VM, which has strict rules of usage - therefore more safety, and is created to work with digital assets.
 
-Resource type can only be defined and managed in a single module. This module sets rules for accessing, destroying, transfering and checking existence of resources defined in it.
+Resource type can only be defined and managed in a single module. This module sets rules for accessing, destroying, transferring and checking existence of resources defined in it.
 
 ## Develop a resource
 
@@ -88,7 +88,7 @@ Even though there's a lot of code inside, we'll focus on 4 main methods: `borrow
 
 ### move\_to&lt;T&gt;\(&signer, T\)
 
-When resource is created, it needs to be moved to address \(otherwise it will never be actually created - there's no 'contract storage' - only accounts\). It is important to note that newly created resource can be moved only to the sender of transaction - this makes initalization of resource impossible at someone else's address.
+When resource is created, it needs to be moved to address \(otherwise it will never be actually created - there's no 'contract storage' - only accounts\). It is important to note that newly created resource can be moved only to the sender of transaction - this makes initialization of resource impossible at someone else's address.
 
 To move resource to sender `move_to<T>(&signer, T)` method is used - as obvious as it is - where T is a generic type and instance of this type - a resource:
 

@@ -50,7 +50,7 @@ Save configuration.
 
 ## Account creation
 
-![Account](/assets/module.png "Account")
+![Account](../assets/module.png "Account")
 
 * Navigate to **"Accounts"** in the header menu.
 * Click on **"Add account"**.
@@ -73,7 +73,7 @@ Next steps required to have  [dove](../move_vm/compiler_&_toolset.md) compiler i
 
 ### Module
 
-![Deploy Module](/assets/module.png "Deploy Module")
+![Deploy Module](../assets/module.png "Deploy Module")
 
 To deploy compiled module do following steps:
 
@@ -89,7 +89,7 @@ To deploy compiled module do following steps:
 
 ### Script
 
-![Execute script](/assets/script.png "Execute script")
+![Execute script](../assets/script.png "Execute script")
 
 {% hint style="info" %}
 🧙‍♂️ Compile a script using dove with arguments using `ct` command, use file with `.mvt` extension.
@@ -109,7 +109,7 @@ To deploy compiled script transaction do following steps:
 
 ### Sudo
 
-![Sudo](/assets/sudo.png "Sudo")
+![Sudo](../assets/sudo.png "Sudo")
 
 You can use `sudo` in Substrate to deploy [Standard Library](../move_vm/stdlib.md) to Move VM pallet. Standard library will be stored under the `0x01` address.
 To deploy a standard library using `sudo` you need access to `sudo` account, in case of local network it's usually `Alice` account.
@@ -133,7 +133,7 @@ To deploy standard module do following steps:
 
 To speed up transaction you can provide additional tips to the transaction, when you click on **Submit Transaction** button it show modal where you can configure tip:
 
-![Tips](/assets/tips.png "Tips")
+![Tips](../assets/tips.png "Tips")
 
 See [gas, weight and tips](../move_vm/gas.md) documentation to learn more.
 

@@ -1,13 +1,13 @@
 # Introduction
 
-![Move Langugage](/assets/move_lang.png "Move Language")
+![Move Langugage](../assets/move_lang.png "Move Language")
 
 Many crypto-developers are also interested in using the Move language. The reasons for this are its high security and the emerging markets that will grow as soon as cryptographic and non-cryptographic users are united.
 
 We will lean on the prior developments and expertise of the Dfinance team, who were the first to integrate the Move VM into existing blockchains when working on the [Dfinance](https://dfinance.co) platform and now to Pontem.
 
 {% hint style="info" %}
-🧙‍♂️ Move Language is the most secure smart contracts language and will probably become the defacto standard after Solidity. 
+🧙‍♂️ Move Language is the most secure smart contracts language and will probably become the de facto standard after Solidity. 
 {% endhint %}
 
 It combines security by design (__formal verification from box, atomic resource model__) with ease of use, being Turing complete, safe and flexible. It is developed and used by Facebook's Diem (formerly known as Libra), which makes the Pontem network compatible with the upcoming Diem financial network. 
@@ -33,4 +33,4 @@ List of recommended resources:
 
 Meanwhile in the current documentation you can find more advanced examples, tips and tricks. 
 
-Also look at our [tutorials](./../tutorials/README.md) to learn Move by examples.
+Also look at our [tutorials](../tutorials/README.md) to learn Move by examples.

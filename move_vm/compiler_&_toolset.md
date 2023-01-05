@@ -9,9 +9,9 @@ We've developed a toolset for the Move VM and language which allows for:
 
 ## Installation
 
-All tools stored in our [Move-Tools](https://github.com/pontem-network/move-tools) Github repository.
+All tools stored in our [Move-Tools](https://github.com/pontem-network/dove) Github repository.
 
-You can download all tools from [releases page](https://github.com/pontem-network/move-tools/releases).
+You can download all tools from [releases page](https://github.com/pontem-network/dove/releases).
 
 After downloading rename tool(s) removing version and os and moving binary to `/usr/local/bin/`.
 
@@ -31,7 +31,7 @@ For Windows:
 
 Now dove is available from **"cmd"**.
 
-To build tools from sources see [README](https://github.com/pontem-network/move-tools#move-tools).
+To build tools from sources see [README](https://github.com/pontem-network/dove#move-tools).
 
 ## Dove
 
@@ -127,7 +127,7 @@ This command searches for the script by name 'store_u64' in the script directory
 This command will fail if:
 
 * There is no script with the name given name 'store_u64'.
-* There is more than one script with the name 'store_64'.
+* There is more than one script with the name 'store_u64'.
 * The passed parameters or type parameters do not match the script parameters.
 * There are syntax errors in the script.
 * You can use type parameters like in the move language.
@@ -171,7 +171,7 @@ dove ct 'my_script([10, 20, 1024])' // Vector u64
 dove ct 'my_script([1exaAg2VJRQbyUBAeXcktChCAqjVP9TUxF3zo23R2T6EGdE, 0x1CF326C5AAA5AF9F0E2791E66310FE8F044FAADAF12567EAA0976959D1F7731F, 0x01])' // Vector addresses.
 ```
 
-See more in [Dove documentation](https://github.com/pontem-network/move-tools#arguments).
+See more in [Dove documentation](https://github.com/pontem-network/dove#arguments).
 
 ### More
 
@@ -191,18 +191,18 @@ Move language server used mostly in Ide extensions, like our:
 * [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=PontemNetwork.move-language) 
 * [IntelliJ IDEA Extension](https://plugins.jetbrains.com/plugin/14721-move-language).
 
-See [documentation](https://github.com/pontem-network/move-tools#language-server).
+See [documentation](https://github.com/pontem-network/dove#language-server).
 
 ## Resource viewer
 
 Resource viewer allows developers to read resources from blockchain storage. In case of Pontem it's Substrate storage.
 
-* [Instruction](https://github.com/pontem-network/move-tools/blob/master/resource-viewer/README.md) to install resource viewer.
+* [Instruction](https://github.com/pontem-network/dove/blob/master/resource-viewer/README.md) to install resource viewer.
 * [Tutorial](../tutorials/watch_resources.md) how to use Move resource viewer.
 
 ## Disassembler
 
-Allows to dissable compiled `.mv` (modules/scripts) files:
+Allows to disassemble compiled `.mv` (modules/scripts) files:
 
 ```sh
 disassembler --input <path to compiled module or script>

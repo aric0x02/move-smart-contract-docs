@@ -1,10 +1,10 @@
 # What is Pontem?
 
-![Pontem Network](/assets/illustrations/whats_pontem.png "Pontem Network")
+![Pontem Network](../assets/illustrations/whats_pontem.png "Pontem Network")
 
 ## Features
 
-![Features](/assets/illustrations/introduction.png "Features")
+![Features](../assets/illustrations/introduction.png "Features")
 
 {% hint style="info" %}
 🚀 Pontem is a bridge between the regulated and unregulated worlds that will allow exchanging value between the two. It is backed by Wings Foundation, a Swiss-based non-profit foundation established in 2016.
@@ -26,7 +26,7 @@ It will also speed up their go-to-market strategy if they are chosen to be onboa
 
 ## Why Pontem?
 
-![Diem Experimental Network](/assets/illustrations/diem_exp.png "Diem Experimental Network")
+![Diem Experimental Network](../assets/illustrations/diem_exp.png "Diem Experimental Network")
 
 Today, more than ever, we are standing at a divide between two crypto worlds — the regulated and the unregulated. 
 

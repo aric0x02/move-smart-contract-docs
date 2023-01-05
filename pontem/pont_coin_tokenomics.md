@@ -14,4 +14,4 @@ Some of the initial utility features of the token are as follows:
 
 ## Token Distribution & Allocation
 
-![Token Distribution & Allocation](/assets/illustrations/distribution.png "Token Distribution & Allocation")
+![Token Distribution & Allocation](../assets/illustrations/distribution.png "Token Distribution & Allocation")

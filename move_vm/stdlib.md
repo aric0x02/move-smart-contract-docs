@@ -279,7 +279,7 @@ script {
     fun main(sender: &signer, amount: u128) {
         let pont = Account::withdraw_from_sender<PONT::T>(sender, amount);
 
-        // Get denom vector<8>.
+        // Get denom vector<u8>.
         let _ = Pontem::denom<PONT::T>();
 
         // Get value of withdrawed xfi.

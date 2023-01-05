@@ -10,9 +10,9 @@ Pontem is the first project bringing Facebook's Move technology to the general c
 🧙‍♂️ We are the only ones who have successfully ported Move to Cosmos before and now to Polkadot, being recognized by Web3 Foundation and got Web3 Foundation grant.
 {% endhint %}
 
-![W3F Grant](/assets/w3f_grant.png "Project Supported By Web3 Foundation Grants Program")
+![W3F Grant](../assets/w3f_grant.png "Project Supported By Web3 Foundation Grants Program")
 
-![Comparison](/assets/illustrations/comparison.png "Comparison")
+![Comparison](../assets/illustrations/comparison.png "Comparison")
 
 Our deep tech capabilities and over 2 years of experience intimately working with and knowing Libra/Diem will enable us to create a truly **permission-less ecosystem**, while still ensuring full compatibility with the Facebook version.
 

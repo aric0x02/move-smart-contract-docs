@@ -28,6 +28,7 @@ Create a new project using **dove**:
 
 ```text
 dove new my_modules --dialect polkadot --address <address>
+dove new my_modules --dialect polkadot --address gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih
 cd my_modules
 ```
 

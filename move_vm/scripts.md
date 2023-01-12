@@ -36,7 +36,7 @@ The script accepts two arguments in function **"sum"**, then calculate the sum w
 Let's compile script using dove to create a new binary contains both script and arguments for script:
 
 ```text
-dove ct 'sum(10, 20)'
+dove call 'sum(10, 20)'
 ```
 
 After compilation see transaction file:
@@ -58,15 +58,15 @@ Create a new script `store_sum.move` in `./scripts/` folder and put the followin
 
 ```rust
 script {
-    use 0x1::Signer;
-    use {{sender}}::Storage;
+    use Std::Signer;
+    use Alice::Storage;
 
-    fun store_sum(account: &signer, a: u64, b: u64) {
+    fun store_sum(account: signer, a: u64, b: u64) {
         // Store sum.
-        Storage::store_sum(account, a, b);
+        Storage::store_sum(&account, a, b);
 
         // Get sum from resource.
-        let sum = Storage::get_sum(Signer::address_of(account));
+        let sum = Storage::get_sum(Signer::address_of(&account));
 
         // Throw error if sums don't match.
         // Error code is 101.
@@ -78,7 +78,7 @@ script {
 Compile new script like previous example:
 
 ```text
-dove ct 'store_sum(10, 20)'
+dove call 'store_sum(10,20)'
 ```
 
 {% hint style="info" %}

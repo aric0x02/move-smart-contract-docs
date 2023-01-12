@@ -41,6 +41,7 @@ Let's create first project:
 
 ```sh
 dove new first_project --dialect polkadot  --address <address>
+dove new first_project -- --dialect polkadot  --address gkQ5K6EnLRgZkwozG8GiBAEnJyM6FxzbSaSmVhKJ2w8FcK7ih
 ```
 
 **Replace address with your address.**
@@ -52,12 +53,12 @@ cd ./first_project
 ls -la
 ```
 
-* `Dove.toml` - configuration file/.
+* `Move.toml` - configuration file/.
 * `modules` - place modules here.
 * `scripts` - place scripts here.
 * `tests` - place tests here.
 
-Let's see what contains `Dove.toml`:
+Let's see what contains `Move.toml`:
 
 ```toml
 [package]
@@ -94,32 +95,32 @@ Build your empty project:
 
 ```sh
 dove build # Build script without providing arguments, so can't use in pallet.
-dove ct 'test()' # Build script with arguments.
+dove call 'test()' # Build script with arguments.
 ```
 
-There is a difference between `build` and `ct` commands, if you want just to `build` your scripts use `build`, if you want to send transactions to the pallet use `ct` and provide arguments. Use `ct` only for scripts, build modules with `build` command.
+There is a difference between `build` and `call` commands, if you want just to `build` your scripts use `build`, if you want to send transactions to the pallet use `call` and provide arguments. Use `call` only for scripts, build modules with `build` command.
 
 ```sh
-dove ct --help
+dove call --help
 ```
 
-See your builded artifacts in `./target` folder:
+See your builded artifacts in `./build` folder:
 
 ```sh
-ls -la ./target/scripts # Just built script
-ls -la ./target/transactions # Script with arguments for pallet.
+ls -la ./build/first_project/bytecode_scripts # Just built script
+ls -la ./build/first_project/transactions # Script with arguments for pallet.
 ```
 
 ### Script Transaction
 
-Command `ct` allows you to create transactions for an Polkadot based chain with Move Pallet.
+Command `call` allows you to create transactions for an Polkadot based chain with Move Pallet.
 
-`ct` takes script identifier, type parameters, and arguments and creates a transaction file as an artifact of work:
+`call` takes script identifier, type parameters, and arguments and creates a transaction file as an artifact of work:
 
 Example:
 
 ```sh
-dove ct 'store_u64(60)'
+dove call 'store_u64(60)'
 ```
 
 This command searches for the script by name 'store_u64' in the script directory. Then it compiles it and creates a transaction file.
@@ -135,13 +136,13 @@ This command will fail if:
 Example:
 
 ```sh
-dove ct 'create_account<0x01::PONT::T>()'
+dove call 'create_account<0x01::PONT::T>()'
 ```
 
 You allow to use addresses:
 
 ```sh
-dove ct 'send_payment(1exaAg2VJRQbyUBAeXcktChCAqjVP9TUxF3zo23R2T6EGdE)'
+dove call 'send_payment(1exaAg2VJRQbyUBAeXcktChCAqjVP9TUxF3zo23R2T6EGdE)'
 ```
 
 Supported types:
@@ -149,26 +150,26 @@ Supported types:
 **Numbers (u8, u64, u128):**
 
 ```sh
-dove ct 'my_script(10, 1024)'
+dove call 'my_script(10, 1024)'
 ```
 
 **Boolean:**
 
 ```sh
-dove ct 'my_script(true, false)'
+dove call 'my_script(true, false)'
 ```
 
 **Addresses:**
 
 ```sh
-dove ct 'my_script(1exaAg2VJRQbyUBAeXcktChCAqjVP9TUxF3zo23R2T6EGdE, 0x1CF326C5AAA5AF9F0E2791E66310FE8F044FAADAF12567EAA0976959D1F7731F)'
+dove call 'my_script(1exaAg2VJRQbyUBAeXcktChCAqjVP9TUxF3zo23R2T6EGdE, 0x1CF326C5AAA5AF9F0E2791E66310FE8F044FAADAF12567EAA0976959D1F7731F)'
 ```
 
 **Vectors:**
 
 ```sh
-dove ct 'my_script([10, 20, 1024])' // Vector u64
-dove ct 'my_script([1exaAg2VJRQbyUBAeXcktChCAqjVP9TUxF3zo23R2T6EGdE, 0x1CF326C5AAA5AF9F0E2791E66310FE8F044FAADAF12567EAA0976959D1F7731F, 0x01])' // Vector addresses.
+dove call 'my_script([10, 20, 1024])' // Vector u64
+dove call 'my_script([1exaAg2VJRQbyUBAeXcktChCAqjVP9TUxF3zo23R2T6EGdE, 0x1CF326C5AAA5AF9F0E2791E66310FE8F044FAADAF12567EAA0976959D1F7731F, 0x01])' // Vector addresses.
 ```
 
 See more in [Dove documentation](https://github.com/pontem-network/dove#arguments).
